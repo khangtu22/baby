@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17245a">
+  <meta name="description" content="Lộ trình song ngữ Việt–Anh từ sơ sinh đến 6 tuổi: chọn tuổi của bé, xem hoạt động 7 ngày và câu nói mẫu để chơi cùng con mỗi ngày.">
+  <title>Hai tiếng, một tuổi thơ · Lộ trình song ngữ cho bé</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2317245a'/%3E%3Cpath d='M15 19h14c5 0 8 2 8 7v22H23c-5 0-8-2-8-7V19Zm34 0H35c-5 0-8 2-8 7v22h14c5 0 8-2 8-7V19Z' fill='none' stroke='%23ffd75c' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#dau-trang" aria-label="Hai tiếng, một tuổi thơ — về đầu trang"><span class="brand-mark" aria-hidden="true">✦</span><span>Hai tiếng,<br>một tuổi thơ</span></a>
+      <span class="topbar-note">Bố mẹ chơi cùng bé · Việt + Anh</span>
+      <a class="topbar-link" href="#nguyen-tac">Cách dùng lộ trình <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <div class="app-layout" id="dau-trang">
+      <aside class="sidebar" aria-label="Chọn giai đoạn của bé">
+        <div class="sidebar-heading"><span class="tiny-sun" aria-hidden="true">☀</span><h2>Bắt đầu từ bé nhà mình</h2></div>
+        <label class="input-label" for="birthday">Ngày sinh của bé <span>(không bắt buộc)</span></label>
+        <input id="birthday" type="date" autocomplete="bday" aria-describedby="birthday-help">
+        <p class="input-help" id="birthday-help">Chỉ lưu trên thiết bị này để tự chọn giai đoạn.</p>
+        <p class="age-message" id="age-message" role="status"></p>
+        <div class="side-divider"></div>
+        <h3 class="side-subhead">Chọn theo độ tuổi</h3>
+        <nav class="stage-nav" id="stage-nav" aria-label="Các giai đoạn"></nav>
+        <div class="side-tip"><span class="tip-sparkle" aria-hidden="true">✳</span><p><strong>Không cần học như ở lớp.</strong> Một câu nói, một lần nhìn nhau, một trò chơi lặp lại đều có ích.</p></div>
+      </aside>
+
+      <main id="main-content">
+        <section class="stage-hero" aria-labelledby="stage-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> LỘ TRÌNH VIỆT – ANH</p>
+            <p class="stage-pill" id="stage-pill"></p>
+            <h1 id="stage-title"></h1>
+            <p class="hero-description" id="stage-description"></p>
+            <div class="hero-tags"><span>Đời thường</span><span>Không áp lực</span><span>Chơi cùng bố mẹ</span></div>
+          </div>
+          <img class="hero-image" src="family-reading.jpg" alt="Bố mẹ cùng em bé xem sách tranh tại nhà" width="1100" height="825">
+        </section>
+
+        <section class="quick-rhythm" aria-labelledby="rhythm-title">
+          <div class="section-title-row"><div><p class="section-kicker">NHỊP MỘT NGÀY</p><h2 id="rhythm-title">Gắn tiếng Anh vào lúc nhà mình đang làm</h2></div><p id="rhythm-note"></p></div>
+          <div class="rhythm-grid" id="rhythm-grid"></div>
+        </section>
+
+        <section class="week-section" aria-labelledby="week-title">
+          <div class="section-title-row week-heading"><div><p class="section-kicker">7 NGÀY THỬ CÙNG CON</p><h2 id="week-title">Hôm nay mình chơi gì?</h2></div><p>Chọn một ngày bất kỳ; lặp lại trò bé thích.</p></div>
+          <div class="week-tabs" id="week-tabs" role="group" aria-label="Chọn ngày trong kế hoạch 7 ngày"></div>
+          <div class="day-topline"><div><span class="day-badge" id="day-badge"></span><h3 id="day-title"></h3><p id="day-description"></p></div><div class="progress-box"><span id="progress-text"></span><div class="progress-track" role="progressbar" aria-label="Tiến độ ngày đã chọn" aria-valuemin="0" aria-valuemax="2" aria-valuenow="0" id="progress-bar"><span id="progress-fill"></span></div></div></div>
+          <div class="activities" id="activities"></div>
+          <p class="local-note">✓ Dấu “đã thử” chỉ lưu trên thiết bị này và làm mới mỗi tuần. Bé không cần hoàn thành đủ hai hoạt động.</p>
+        </section>
+
+        <section class="growth-section" aria-labelledby="growth-title"><div class="section-title-row"><div><p class="section-kicker">ĐIỀU NÊN ĐỂ Ý</p><h2 id="growth-title">Nhìn vào sự kết nối, không đếm điểm</h2></div></div><div class="growth-grid"><article class="growth-card growth-focus"><span class="growth-icon" aria-hidden="true">◎</span><h3>Ưu tiên lúc này</h3><p id="growth-focus"></p></article><article class="growth-card"><span class="growth-icon" aria-hidden="true">✳</span><h3>Những tín hiệu có thể thấy</h3><ul id="growth-signals"></ul></article><article class="growth-card"><span class="growth-icon" aria-hidden="true">♡</span><h3>Bố mẹ có thể giúp</h3><ul id="growth-parents"></ul></article></div><p class="milestone-note">Các tín hiệu là gợi ý quan sát, không phải bài kiểm tra hay công cụ chẩn đoán. Bé song ngữ có thể dùng từ ở cả hai tiếng.</p></section>
+
+        <section class="principles-section" id="nguyen-tac" aria-labelledby="principles-title"><div class="section-title-row"><div><p class="section-kicker">GIỮ CHO VIỆC HỌC THẬT VUI</p><h2 id="principles-title">Ba điều đáng nhớ</h2></div></div><div class="principle-grid"><article class="principle-card"><span class="principle-number">01</span><h3>Tiếng Việt vẫn là nền tảng</h3><p>Hãy nói với con bằng ngôn ngữ bạn diễn đạt tự nhiên nhất. Giữ những cuộc trò chuyện tiếng Việt phong phú và thêm tiếng Anh vào các tình huống quen thuộc.</p></article><article class="principle-card"><span class="principle-number">02</span><h3>Đáp lại trước, dạy sau</h3><p>Khi bé nhìn, ê a, chỉ hoặc nói, hãy đáp lại và chờ bé tiếp tục. Sự qua lại ấy quan trọng hơn việc yêu cầu con nhắc đúng một từ.</p></article><article class="principle-card"><span class="principle-number">03</span><h3>Người thật, việc thật</h3><p>App là gợi ý cho bố mẹ. Bé học tốt nhất khi được chơi, nghe, nhìn mặt và tương tác trực tiếp; đừng dùng video thụ động làm buổi học.</p></article></div></section>
+
+        <section class="faq-section" aria-labelledby="faq-title"><div class="section-title-row"><div><p class="section-kicker">BỐ MẸ HAY HỎI</p><h2 id="faq-title">Yên tâm đi cùng bé</h2></div></div><div class="faq-list"><details><summary>Bé trộn tiếng Việt và tiếng Anh có sao không?</summary><p>Đó là điều thường gặp khi trẻ học hai ngôn ngữ. Hãy nghe ý con muốn nói, rồi đáp lại tự nhiên bằng câu đầy đủ. Không cần ngắt lời để sửa mọi từ.</p></details><details><summary>Bố mẹ không giỏi tiếng Anh thì bắt đầu thế nào?</summary><p>Chọn vài câu ngắn bạn thấy thoải mái, gắn với việc làm hằng ngày và lặp lại. Tiếng Việt tự nhiên, giàu tình cảm của bố mẹ cũng rất quý. Không cần ép mình nói tiếng Anh cả ngày.</p></details><details><summary>Có cần chia đúng 50% thời gian cho mỗi tiếng?</summary><p>Không có tỉ lệ cố định cho mọi gia đình. Cơ hội nghe và dùng mỗi ngôn ngữ thường xuyên, trong bối cảnh có ý nghĩa, hữu ích hơn một con số cứng.</p></details><details><summary>Khi nào nên hỏi bác sĩ hoặc chuyên gia?</summary><p>Nếu bé mất kỹ năng đã có, ít phản ứng với âm thanh, hoặc bạn lo về khả năng giao tiếp của con ở cả hai ngôn ngữ, hãy trao đổi với bác sĩ nhi. Họ có thể đề xuất đánh giá thính lực hoặc chuyên gia âm ngữ trị liệu khi cần.</p></details></div></section>
+
+        <section class="sources-section" aria-labelledby="sources-title"><h2 id="sources-title">Nguồn tham khảo</h2><p>Lộ trình tổng hợp từ hướng dẫn phát triển giao tiếp và tương tác sớm. Mốc tuổi chỉ để chọn hoạt động phù hợp, không thay cho đánh giá cá nhân.</p><ul><li><a href="https://www.healthychildren.org/English/ages-stages/gradeschool/school/Pages/7-Myths-Facts-Bilingual-Children-Learning-Language.aspx" target="_blank" rel="noopener noreferrer">American Academy of Pediatrics · Trẻ học hai ngôn ngữ</a></li><li><a href="https://www.asha.org/public/developmental-milestones/" target="_blank" rel="noopener noreferrer">ASHA · Mốc phát triển giao tiếp theo tuổi</a></li><li><a href="https://developingchild.harvard.edu/key-concept/serve-and-return/" target="_blank" rel="noopener noreferrer">Harvard Center on the Developing Child · Tương tác đáp lại</a></li><li><a href="https://www.healthychildren.org/English/ages-stages/baby/Pages/how-to-share-books-with-your-baby.aspx" target="_blank" rel="noopener noreferrer">American Academy of Pediatrics · Đọc sách cùng bé từ sớm</a></li><li><a href="https://www.cdc.gov/act-early/milestones/" target="_blank" rel="noopener noreferrer">CDC · Theo dõi phát triển và trao đổi khi lo lắng</a></li><li><a href="https://www.who.int/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more" target="_blank" rel="noopener noreferrer">WHO · Vận động, giấc ngủ và thời gian màn hình ở trẻ nhỏ</a></li></ul></section>
+      </main>
+    </div>
+    <footer><span>Hai tiếng, một tuổi thơ</span><span>Mỗi nhà một nhịp, mỗi bé một cách lớn lên. ♡</span></footer>
+  </div>
+</body>
+</html>
